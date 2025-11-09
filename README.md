@@ -34,3 +34,9 @@
 
 > Настоятельно рекомендую использовать **графический ускоритель T4** из
 > **Google Colab** для запуска этого кода!
+
+<div align="center">
+
+![enter image description here](https://gymnasium.farama.org/_images/bipedal_walker.gif)
+
+</div>
