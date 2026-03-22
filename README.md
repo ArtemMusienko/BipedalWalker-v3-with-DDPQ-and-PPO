@@ -2,40 +2,43 @@
 
 # BipedalWalker-v3 with DDPQ and PPO
 
-В данном коде реализованы 2 метода в обучении с подкреплением (**RL**), а именно: **DDPQ** и **PPO**. 
+[![ru](https://img.shields.io/badge/README_на_русском-2A2C39?style=for-the-badge&logo=github&logoColor=white)](README.ru.md)  
+
+This code implements two reinforcement learning (**RL**) methods, namely **DDPQ** and **PPO**.
 
 ## DDPG (Deep Deterministic Policy Gradient):
 
-**DDPG**  — это алгоритм, который использует детерминированную политику для работы с непрерывными пространствами действий. Он сочетает в себе идеи Q-обучения и градиента политики.
+**DDPG** is an algorithm that uses a deterministic policy to work with continuous action spaces. It combines the ideas of Q-learning and policy gradient.
 
-**Особенности**:
+**Features**:
 
--   **Детерминированная политика:**  Прямое отображение состояний в действия.
-    
--   **Исследование через добавление шума:** Добавление стохастического шума к действиям для стимулирования исследования.
-    
--   **Буфер воспроизведения:** Хранение опыта в буфере и повторное использование для обучения.
+-  **Deterministic policy:** Direct mapping of states to actions.
+
+-  **Exploration through noise addition:** Adding stochastic noise to actions to encourage exploration.
+
+-  **Replay buffer:** Storing experience in a buffer and reusing it for learning.
+
 
 ## PPO (Proximal Policy Optimization):
 
-**PPO** — это алгоритм, который ограничивает обновления политики, чтобы предотвратить резкие изменения и обеспечить стабильность обучения.
+**PPO** is an algorithm that limits policy updates to prevent sudden changes and ensure stable training.
 
-**Особенности**:
+ **Features**:
 
--   **Ограничение обновлений политики:**  Использование ограниченного обновления политики для стабилизации обучения.
-    
--   **Возможность повторного использования выборок:**  Повторное использование выборок для улучшения эффективности обучения.
-    
--   **Стабильная оптимизация:**  Обеспечение стабильной оптимизации политики.
+-  **Limited policy updates:** Using limited policy updates to stabilize training.
 
-Выполнен анализ полученных результатов, в котором происходит сравнение работы 2 методов на базе такой среды, как **BipedalWalker-v3**. Написаны вывод и рекомендации по улучшению модели.
+-  **Sample reuse:** Reusing samples to improve training efficiency.
 
-С более подробным описанием кода и блоков кода можно ознакомиться в **Google Colab Notebook**, представленном в данном репозитории.
+-  **Stable optimization:** Ensuring stable policy optimization.
 
-> Настоятельно рекомендую использовать **графический ускоритель T4** из
-> **Google Colab** для запуска этого кода!
+The results have been analyzed and compared using two methods based on the **BipedalWalker-v3** environment. The output and recommendations for improving the model have been written.
 
-<div align="center">
+For a more detailed description of the code and code blocks, please refer to the **Google Colab Notebook** in this repository.
+
+> I strongly recommend using the **T4 GPU accelerator** from
+>  **Google Colab** to run this code!
+
+<div  align="center">
 
 ![enter image description here](https://gymnasium.farama.org/_images/bipedal_walker.gif)
 
